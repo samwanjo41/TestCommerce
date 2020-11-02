@@ -13,7 +13,7 @@ logger = logging.getLogger(__name__)
 def generate_thumbnail(sender, instance, **kwargs):
     logger.info("Generating thumbnail for product %d", instance.product.id)
     image = Image.open(instance.image)
-    # image - image.convert("RGB",  colors=256)
+    image = image.convert("RGB",  colors=256)
     image.thumbnail(THUMBNAIL_SIZE, Image.ANTIALIAS)
 
     temp_thumb = BytesIO()

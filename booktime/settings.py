@@ -140,3 +140,5 @@ else:
 
     
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+AUTH_USER_MODEL = "main.User"
